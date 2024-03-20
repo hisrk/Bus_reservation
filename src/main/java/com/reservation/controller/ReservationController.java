@@ -70,7 +70,7 @@ public class ReservationController {
         if ((busIsPresent && routeIsPresent) || (busIsPresent && subRouteIsPresent)) {
 
             if (seatIsPresent) {
-                return new ResponseEntity<>("Seat not found", HttpStatus.BAD_REQUEST);
+                return new ResponseEntity<>("Seat is already booked try with Different Seat Numbers", HttpStatus.BAD_REQUEST);
             }
 
 
