@@ -51,10 +51,9 @@ public class BusController {
 
 
         if(!routes.isEmpty()) {
-            // Map Route entities to RouteDTOs
+
             List<RouteDTO> routeDTOs = routes.stream()
-                    // .map(this::convertToRouteDTO).
-                    //.map(System.out::prinln()
+
                     .map(route -> this.convertToRouteDTO(route))
                     .collect(Collectors.toList());
 
